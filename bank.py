@@ -1,20 +1,18 @@
-#A program created in reference to the Seinfield episode in which Kramer goes to the bank and is awarded based on the teller's greeting.
+#A direct copy of bank.py from the Conditionals unit.
 
 def main():
-    greeting = input("Hello! ").lower().strip()
+    greeting = input("Hello! ")
     amount = value(greeting)
-    print(amount)
+    print(f"${amount}")
 
 def value(greeting):
-    if greeting.startswith("hello") == True:
-        amount = "$0"
-        return amount
-    elif greeting.startswith("h") == True:
-        amount = "$20"
-        return amount
+    greeting = greeting.lower().strip()
+    if "hello" in greeting:
+        return 0
+    elif "h" in greeting[0]:
+        return 20
     else:
-        amount = "$100"
-        return amount
+        return 100
 
 
 if __name__ == "__main__":

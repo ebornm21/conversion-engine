@@ -1,7 +1,7 @@
-#A program that will convert a fraction to a percent, in the context of a fuel gauge. It will also detect if the tank is nearly full or nearly empty.
+#A direct copy of fuel.py from the Exceptions unit.
 
 def main():
-    meter = input("How full is the tank (fraction)? ")
+    meter = input("How full is the tank? ")
     z = convert(meter)
     output = gauge(z)
     print(output)
